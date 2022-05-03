@@ -1,4 +1,10 @@
 .DS_Store
+<<<<<<< HEAD
 .idea
 *.iml
 *.DS_Store
+=======
+*/*.DS_Store
+.idea
+*.iml
+>>>>>>> tmp

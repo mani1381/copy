@@ -22,10 +22,13 @@ public class Terrain {
     private Resource TerrainResource;
     private City city;
     private ArrayList<Revealed> reveals = new ArrayList<>() ;
+    private boolean isBeingWorkedOn;
 
-    public Terrain(int x, int y, String Type, TerrainTypes terrainTypes,  ArrayList<TerrainFeatureTypes> terrainFeatureTypes,
-            CombatUnit combatUnit, NonCombatUnit nonCombatUnit, Improvements TerrrainImprovement,
-            Resource TerrainResource) {
+
+
+
+
+    Terrain(int x, int y, String Type, TerrainTypes terrainTypes, TerrainFeatureTypes terrainFeatureTypes, CombatUnit combatUnit,NonCombatUnit nonCombatUnit) {
         this.x = x;
         this.y = y;
         this.Type = Type;
@@ -36,10 +39,16 @@ public class Terrain {
         this.TerrrainImprovement = TerrrainImprovement;
         this.TerrainResource = TerrainResource;
         this.city = null;
+        this.isBeingWorkedOn = false;
     }
 
 
-   
+
+
+        this.city = null;
+        this.isBeingWorkedOn = false;
+    }
+
 
     public int getX() {
         return this.x;
@@ -97,6 +106,15 @@ public class Terrain {
         this.nonCombatUnit = nonCombatUnit;
     }
 
+
+    public Resource getResource()
+    {
+        return resource;
+    }
+
+    public void setResource(Resource resource)
+    {
+        this.resource = resource;
     public Improvements getTerrrainImprovement() {
         return this.TerrrainImprovement;
     }
@@ -137,5 +155,27 @@ public class Terrain {
     public boolean containsUnit(Unit unit2)
     {
         return unit2.equals(combatUnit) || unit2.equals(nonCombatUnit);
+    }
+
+    public boolean isBeingWorkedOn()
+    {
+        return isBeingWorkedOn;
+    }
+
+    public void setBeingWorkedOn(boolean beingWorkedOn)
+    {
+        isBeingWorkedOn = beingWorkedOn;
+    }
+
+    public int getGold ()
+    {
+        if (this.isBeingWorkedOn == false)
+        {
+            return 0;
+        }
+        else
+        {
+
+        }
     }
 }
