@@ -1,6 +1,5 @@
 package Model.City;
 
-import Model.City.City;
 import Model.Terrain;
 
 public class Citizen {
