@@ -1,6 +1,13 @@
 package Model.Units;
 
 public class CombatUnit extends Unit {
+<<<<<<< HEAD
+=======
+    private boolean isGarrisoned;
+    private boolean alert;
+    private boolean fortify;
+    private boolean fortifyUntilHeal;
+>>>>>>> tmp2
 
     public CombatUnit(int x, int y, int number, int militaryPower, int life, int speed, boolean isAsleep,
             boolean isFinished, UnitTypes unitType, boolean isSelected, boolean isGarrisoned, boolean alert,
@@ -11,6 +18,11 @@ public class CombatUnit extends Unit {
         this.alert = alert;
         this.fortify = fortify;
         this.fortifyUntilHeal = fortifyUntilHeal;
+    }
+
+   public CombatUnit clone(){
+       return new CombatUnit(this.getX(), this.getY(), this.getNumber(), this.getMilitaryPower(), this.getLife(), this.getSpeed(), this.getIsAsleep(), this.getIsFinished(), this.getUnitType(), this.getIsSelected(), this.getIsGarrisoned(), this.getAlert(), this.getFortify(), this.fortifyUntilHeal);
+   }
         this.CombatStrength = 10;
     }
 
@@ -78,3 +90,6 @@ public class CombatUnit extends Unit {
         CombatStrength = combatStrength;
     }
 }
+=======
+}
+>>>>>>> tmp2

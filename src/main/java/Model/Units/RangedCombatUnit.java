@@ -29,4 +29,8 @@ public class RangedCombatUnit extends CombatUnit{
         this.isSetUpForRangedAttack = isSetUpForRangedAttack;
     }
     
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> tmp2

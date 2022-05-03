@@ -19,8 +19,6 @@ public class Resource {
     public Resource clone(){
         return new Resource(this.getResourceType());
     }
-    private String name;
-
     public int getFood() {
         return this.food;
     }
